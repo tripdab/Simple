@@ -1,0 +1,144 @@
+.header {
+    padding: 29px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    display: flex;
+    margin-right: auto;
+}
+
+/* nav */
+
+.header-nav {
+    display: flex;
+}
+
+.header-nav__list {
+    display: flex;
+}
+
+.header-nav__item {
+    margin-right: 60px;
+}
+
+.header-nav__link {
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    color: #4c5866;
+    transition: color 0.2s ease-in;
+}
+
+/* доделать BG для фокуса */
+
+.header-nav__link::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: -5px;
+    bottom: 0;
+    left: -5px;
+
+    background-color: #dad9fb;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+.header-nav__link:hover {
+    color: #7875fe;
+}
+
+.header-nav__link:active {
+    color: #4946b4;
+}
+
+/* buttons */
+
+.header-nav__btns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.header__btn:not(:last-child) {
+    margin-right: 12px;
+}
+
+.header__btn:not(:first-child) {
+    margin-left: 12px;
+}
+
+.header__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    stroke: #4C5866;
+    transition: stroke 0.3s ease-in-out;
+}
+
+.header__btn:hover {
+    stroke: #7875fe;
+}
+
+/* input */
+
+.search-form {
+    display: none;
+    overflow: hidden;
+    position: relative;
+    width: 224px;
+    width: 0;
+    transform: translateX(-15px);
+    transform-origin: right;
+    transition: width 0.3s ease-in;
+}
+
+.search-form--display {
+    display: block;
+}
+
+.search-form--visible {
+    transform: scaleX(1);
+    width: 224px;
+}
+
+.search-form__input {
+    border: none;
+    padding-right: 20px;
+    border-bottom: 1px solid #d1d1e5;
+    width: 100%;
+    height: 24px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #4c5866;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.search-form__input::placeholder {
+    color: #d1d1e5;
+}
+
+/* btn close */
+
+.search-close {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    transform: translateY(-50%);
+}
